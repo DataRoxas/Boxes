@@ -1,4 +1,5 @@
 import java.awt.*;
+//import java.awt.GraphicsEnviroment.*;
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -19,7 +20,7 @@ class NotepadFrame extends JFrame{
         add(new JScrollPane(textArea), BorderLayout.CENTER);
         JPanel controlPanel = new JPanel();
         controlPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
-        String[] fontNames = GraphicsEnviroment.getLocalGraphicsEnviroment().getAvailableFontFamilyNames();
+        String[] fontNames = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
         final JComboBox fontComboBox = new JComboBox(fontNames);
         fontComboBox.setSelectedItem("SansSerif");
         final JComboBox sizeComboBox = new JComboBox();
